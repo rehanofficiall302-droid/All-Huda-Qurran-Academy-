@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn the Holy Quran with Al Huda Quran Academy. Online Quran lessons with Tajweed.">
+  <title>Al Huda Quran Academy</title>
+  <style>
+    :root {
+      --green: #174c3c;
+      --green-dark: #10382c;
+      --gold: #c69a45;
+      --cream: #fbf8f0;
+      --ink: #24332d;
+      --muted: #66736d;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+    }
+    .site-header {
+      background: var(--green-dark);
+      color: #fff;
+      padding: 18px 20px;
+      text-align: center;
+    }
+    .brand {
+      margin: 0;
+      font-family: Georgia, serif;
+      font-size: clamp(1.5rem, 4vw, 2.1rem);
+      letter-spacing: .4px;
+    }
+    .brand span { color: #e7c477; }
+    .hero {
+      background: linear-gradient(135deg, #10382c, #1d6049);
+      color: white;
+      text-align: center;
+      padding: 68px 20px 58px;
+    }
+    .hero .eyebrow, .kicker {
+      color: var(--gold);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      margin: 12px auto;
+      max-width: 850px;
+      font-family: Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      line-height: 1.15;
+    }
+    .hero p {
+      max-width: 650px;
+      margin: 14px auto 25px;
+      color: #e5eee9;
+      font-size: 1.05rem;
+    }
+    .button {
+      display: inline-block;
+      padding: 13px 23px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      transition: transform .2s, background .2s;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-gold { background: var(--gold); color: #172b22; }
+    .button-whatsapp { background: #20bf62; color: #fff; }
+    .content {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: 58px 20px;
+      text-align: center;
+    }
+    .heading {
+      margin: 8px 0 22px;
+      color: var(--green-dark);
+      font-family: Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 2.8rem);
+      line-height: 1.2;
+    }
+    .heading span { color: var(--gold); }
+    .lead {
+      max-width: 700px;
+      margin: 0 auto 28px;
+      color: var(--muted);
+    }
+    .academy-banner {
+      display: block;
+      width: 100%;
+      max-width: 950px;
+      max-height: 520px;
+      object-fit: cover;
+      margin: 28px auto;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(20, 50, 38, .13);
+    }
+    .teacher-profile {
+      max-width: 680px;
+      margin: 42px auto;
+      padding: 30px 22px;
+      background: var(--cream);
+      border: 1px solid #eee5d3;
+      border-radius: 20px;
+    }
+    .teacher-photo {
+      width: 210px;
+      height: 240px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 16px;
+      border: 4px solid white;
+      box-shadow: 0 7px 22px rgba(0,0,0,.12);
+    }
+    .teacher-profile h3 {
+      margin: 18px 0 2px;
+      color: var(--green);
+      font-family: Georgia, serif;
+      font-size: 1.55rem;
+    }
+    .teacher-name {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .teacher-profile p:last-child {
+      max-width: 470px;
+      margin: 0 auto;
+      color: var(--muted);
+    }
+    .academy-video {
+      max-width: 850px;
+      margin: 42px auto 0;
+    }
+    .academy-video h3 {
+      color: var(--green-dark);
+      font-family: Georgia, serif;
+      font-size: 1.55rem;
+    }
+    .academy-video video {
+      display: block;
+      width: 100%;
+      max-height: 520px;
+      margin: 18px auto 0;
+      border-radius: 18px;
+      background: #000;
+    }
+    .contact {
+      background: var(--cream);
+      padding-top: 55px;
+      padding-bottom: 60px;
+    }
+    .contact-card {
+      max-width: 700px;
+      margin: 25px auto 0;
+      padding: 30px 20px;
+      background: #fff;
+      border: 1px solid #eee5d3;
+      border-radius: 20px;
+    }
+    .phone-number {
+      display: block;
+      margin: 12px 0 22px;
+      color: var(--green-dark);
+      font-size: 1.35rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    footer {
+      padding: 20px;
+      background: var(--green-dark);
+      color: #e5eee9;
+      text-align: center;
+      font-size: .9rem;
+    }
+    @media (max-width: 600px) {
+      .hero { padding: 52px 18px 45px; }
+      .content { padding: 44px 16px; }
+      .academy-banner { border-radius: 13px; }
+      .teacher-profile { padding: 24px 16px; }
+      .contact-actions .button { width: 100%; max-width: 290px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <p class="brand">Al Huda <span>Quran Academy</span></p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Learn • Recite • Grow</div>
+      <h1>Learn the Holy Quran with Us</h1>
+      <p>Learn Quran with Tajweed from the comfort of your home with Al Huda Quran Academy.</p>
+      <a class="button button-gold" href="#academy-media">Meet Your Teacher</a>
+    </section>
+
+    <!-- AL HUDA MEDIA SECTION -->
+    <section class="content academy-media" id="academy-media">
+      <div class="kicker">Al Huda Quran Academy</div>
+      <h2 class="heading">Learn Quran <span>With Us</span></h2>
+
+      <!-- Keep 43053.jpg in the same folder as this HTML file -->
+      <img src="43053.jpg" alt="Al Huda Quran Academy banner" class="academy-banner">
+
+      <div class="teacher-profile">
+        <!-- Keep 43056.jpg in the same folder as this HTML file -->
+        <img src="43056.jpg" alt="Qari Asmad" class="teacher-photo">
+        <h3>Meet Your Teacher</h3>
+        <p class="teacher-name">Qari Asmad</p>
+        <p>Learn Quran with Tajweed from the comfort of your home.</p>
+      </div>
+
+      <div class="academy-video">
+        <h3>Watch Our Introduction Video</h3>
+        <!-- Keep 43051.mp4 in the same folder as this HTML file -->
+        <video controls playsinline preload="metadata" poster="43053.jpg">
+          <source src="43051.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+      </div>
+    </section>
+
+    <section class="content contact" id="contact">
+      <div class="kicker">Contact Al Huda</div>
+      <h2 class="heading">We'd Be Happy to <span>Hear From You</span></h2>
+      <p class="lead">Ask about Quran courses, class arrangements, availability or enrollment. Contact us directly on WhatsApp or by phone.</p>
+
+      <div class="contact-card">
+        <p>Call or WhatsApp us</p>
+        <a class="phone-number" href="tel:+923299866560">0329 9866560</a>
+        <div class="contact-actions">
+          <a class="button button-whatsapp"
+             href="https://wa.me/923299866560"
+             target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          <a class="button button-gold" href="tel:+923299866560">Call Now</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Al Huda Quran Academy. All rights reserved.
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
